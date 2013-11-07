@@ -5,6 +5,7 @@ var app = express();
 app.use(express.bodyParser());
 
 GLOBAL.configs = [];
+GLOBAL.stats = new Object();
 
 app.get('/poll', zendesk.getconfig);
 app.get('/config', zendesk.getconfig);

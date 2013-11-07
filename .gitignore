@@ -7,10 +7,10 @@ lib-cov
 *.pid
 *.gz
 *.db
-lib/credentials.txt
 pids
 logs
 results
+credentials.txt
 
 npm-debug.log
 node_modules

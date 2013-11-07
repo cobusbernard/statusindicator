@@ -12,8 +12,8 @@ exports.getconfig = function(req, res) {
 };
 
 exports.getstatus = function(req, res) {
-	console.info(GLOBAL.configs);
-	zendeskapi.opentickets(res);    
+	zendeskapi.opentickets();
+	res.send({response: "Configs / data will be refreshed, current values included in this response.", configs: GLOBAL.configs, stats: GLOBAL.stats});
 };
 //------------- GET -------------//
 
