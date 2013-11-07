@@ -1,6 +1,9 @@
 var zendeskapi = require("../lib/zendesk-api"),
-	db = require("../lib/database");
+	db = require("../lib/database"),
+	actionevent = require("../lib/actionevent.js");
 
+actionevent.playsound("../sounds/2_2VaderBidding.wav");
+	
 //------------- GET -------------//
 exports.poll = function(req, res) {
 	res.send({ response: "Poll started." });
