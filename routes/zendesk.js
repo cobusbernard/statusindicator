@@ -1,12 +1,24 @@
 var zendeskapi = require("../lib/zendesk-api"),
 	db = require("../lib/database");
 
-//------------- Methods -------------//
-exports.test = function(req, res) {
-    res.send({ response: "Server is up!" });
+//------------- GET -------------//
+exports.poll = function(req, res) {
+	res.send({ response: "Poll started." });
+	
 };
 
-exports.config = function(req, res) {
-    res.send({ response: "This is the config response." });
+exports.getconfig = function(req, res) {
+	db.getconfig(res); 
 };
-//------------- Methods -------------//
+
+exports.getstatus = function(req, res) {
+	console.info(GLOBAL.configs);
+	zendeskapi.opentickets(res);    
+};
+//------------- GET -------------//
+
+//------------- POST -------------//
+exports.postconfig = function(req, res) {	
+	db.updateconfig(req, res);
+};
+//------------- POST -------------//

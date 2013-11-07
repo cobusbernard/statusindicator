@@ -6,8 +6,8 @@ lib-cov
 *.out
 *.pid
 *.gz
+*.db
 lib/credentials.txt
-database
 pids
 logs
 results
